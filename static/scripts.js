@@ -51,8 +51,10 @@ for (let i = 0; i < 80; i++) {
         document.body.addEventListener('click', function() {
             var audio = document.getElementById('audio');
             audio.play();
-
-            document.body.style.transition = 'transform 2s ease'; 
+                    
+            document.body.style.transition = 'transform 2s ease';
             document.body.style.transform = 'rotate(720deg)';
-            setTimeout(() => document.body.style.transform = 'rotate(0deg)', 2000);
+            setTimeout(function() {
+                document.body.style.transform = 'rotate(0deg)';
+            }, 2000);
         });
