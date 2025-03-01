@@ -47,8 +47,11 @@ for (let i = 0; i < 80; i++) {
                 setTimeout(() => this.tick(), delta);
             }
         }
-        
+
         document.body.addEventListener('click', function() {
+            var audio = document.getElementById('audio');
+            audio.play();
+
             document.body.style.transition = 'transform 2s ease'; 
             document.body.style.transform = 'rotate(720deg)';
             setTimeout(() => document.body.style.transform = 'rotate(0deg)', 2000);
