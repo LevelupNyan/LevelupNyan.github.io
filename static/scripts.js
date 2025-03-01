@@ -50,8 +50,10 @@ class TxtType {
 
 document.body.addEventListener('click', function() {
     var audio = document.getElementById('audio');
-           audio.play();
-                    
+    if (audio) {
+        audio.play();
+    }
+
     document.body.style.transition = 'transform 2s ease';
     document.body.style.transform = 'rotate(720deg)';
     setTimeout(function() {
